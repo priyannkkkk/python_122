@@ -1,0 +1,46 @@
+import math
+#Scores of two golfers for 24 rounds were as follows:
+#Golfer A: 74,75,78,72,77,79,78,81,76,72,72,77,74,70,78,79,80,81,74,80,75,71,73,73.
+#Golfer B: 86,84,80,88,89,85,86,82,82,79,86,80,82,76,86,89,97,83,80,88,86,81,81,87.
+#Find which golfer may be considered to be more consistent player?
+a = [74,75,78,72,77,79,78,81,76,72,72,77,74,70,78,79,80,81,74,80,75,71,73,73]
+b = sum(a)
+print("sum of all gruoup A:",b)
+c = b/24
+y = 75.79
+print("mean of group A:",y)
+new_array = [x - y for x in a]
+
+rounded_arr = [round(x, 2) for x in new_array]
+print("xi - mean of group a:",rounded_arr)
+squared_arr = [x**2 for x in rounded_arr]
+print("Square of all number",squared_arr)
+d= sum(squared_arr)
+print('summation of square:', d)
+g = d/23
+
+square_root = math.sqrt(g)
+print("Final answer" ,square_root)
+
+print("///////////////////")
+print("////////////////////")
+
+a = [86,84,80,88,89,85,86,82,82,79,86,80,82,76,86,89,97,83,80,88,86,81,81,87]
+b = sum(a)
+print("sum of all gruoup B:",b)
+c = b/24
+
+y = 84.29
+print("mean of group b:",y)
+new_array = [x - y for x in a]
+
+rounded_arr = [round(x, 2) for x in new_array]
+print("xi - mean of group B:",rounded_arr)
+squared_arr = [x**2 for x in rounded_arr]
+print("Square of all number",squared_arr)
+d= sum(squared_arr)
+print('summation of square:', d)
+g = d/23
+
+square_root = math.sqrt(g)
+print("Final answer" ,square_root)
